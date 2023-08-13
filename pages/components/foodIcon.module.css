@@ -1,0 +1,161 @@
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+
+  .foodIconContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(100% - 30px);
+  }
+  
+  .foodIcon {
+    width: 50px; /* Adjust this as needed */
+    height: 50px; /* Adjust this as needed */
+    margin: 10px; /* Adds some spacing between icons */
+    margin-bottom:40px;
+    transition: opacity 0.5s ease;
+    
+  }
+  .fadeOut {
+    opacity: 0;
+    pointer-events: none; /* Disables any clicks or interactions */
+    transition: opacity 0.5s ease;
+  }
+  
+
+
+.breadIcon {
+  width: 60px;
+  height: 60px;
+    background-image: url('./bread.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .cheeseIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./cheese.png');
+    background-size: cover;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+    background-repeat: no-repeat;
+  }
+  .lettuceIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./lettuce.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+
+  }
+  .userInputContainer {
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+
+  }
+  
+  .userInput {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 10px; 
+
+  }
+  
+ 
+  .bananaIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./banana.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .beefIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./beef.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .celeryIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./celery.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .chickenIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./chicken.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .ketchupIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./ketchup.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .noodlesIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./noodles.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .pastaIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./pasta.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .riceIcon {
+    width: 60px;
+    height: 60px;
+    background-image: url('./rice.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
