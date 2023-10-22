@@ -1,19 +1,29 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router'; // Import the useRouter hook
+import { useRouter } from 'next/router';
 
 export default function Authenticate() {
+  const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const router = useRouter(); // Initialize the router
 
-  const handleSignIn = async () => {
-    if (username.length >= 4 && password.length >= 4) {
-      // Redirect to the index.js page upon successful validation
-      router.push('/'); // This will take you to the index.js page
+  const handleSignIn = () => {
+    // Retrieve user data from local storage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find((u) => u.username === username && u.password === password);
+
+    if (user) {
+      // Successful login, you can save user information in state or context for the rest of the app
+      // Redirect to the next page (e.g., recipe.js)
+      router.push('/recipe');
     } else {
-      setMessage('Username and password must be at least 4 characters long.');
+      setMessage('Invalid username or password.');
     }
+  };
+
+  const handleSignUp = () => {
+    // Redirect to the sign-up page
+    router.push('/signup');
   };
 
   return (
@@ -31,6 +41,7 @@ export default function Authenticate() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleSignIn}>Sign In</button>
+      <button onClick={handleSignUp}>Sign Up</button>
       <p>{message}</p>
     </div>
   );
