@@ -9,7 +9,6 @@ export default function Authenticate() {
   const [message, setMessage] = useState('');
 
   const handleSignIn = () => {
-    // Retrieve user data from local storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find((u) => u.username === username && u.password === password);
 
