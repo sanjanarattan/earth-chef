@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import styles from "./index.module.css";
 
 export default function SignUp() {
   const router = useRouter();
@@ -10,18 +11,16 @@ export default function SignUp() {
   const handleSignUp = (e) => {
     e.preventDefault();
 
-    // Save user data in local storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
     users.push({ name, username, password });
     localStorage.setItem('users', JSON.stringify(users));
 
-    // Redirect to the sign-in page (authenticate)
     router.push('/authenticate');
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
+    <div className={styles.main}>
+      <h2 className={styles.gradientText}>Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <input
           type="text"
@@ -44,9 +43,8 @@ export default function SignUp() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit" className={styles.Button}>Sign Up</button>
       </form>
     </div>
   );
 }
-
